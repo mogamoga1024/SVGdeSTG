@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+	<meta charset="UTF-8">
+	<title>SVG de STG</title>
+	<meta name="description" content="SVGのシューティングゲーム">
+	<meta name="keywords" content="SVG, シューティングゲーム, STG">
+	<meta name="google-site-verification" content="lC35WW3W-lsbLS4budw6dEXX7vHAhTQ3CM3g_f0div8" />
+	<style type="text/css">
+	body {
+		background-color: #ccc;
+	}
+	
+	.container {
+		position: relative;
+		width: 1000px;
+		height: 610px;
+		margin: 0 auto;
+		top: 40px;
+		overflow: hidden;
+	}
+	
+	#hp-bar {
+		width: 1000px;
+		height: 10px;
+	}
+	
+	#current-hp {
+		width: 0;
+		height: 10px;
+		background-color: lawngreen;
+	}
+	
+	svg {
+		float: left;
+		overflow: hidden;
+		background-color: whitesmoke;
+	}
+	
+	#info {
+		position: relative;
+		width: 180px;
+		height: 560px;
+		padding: 20px 10px;
+		float: left;
+		font-family: メイリオ;
+		font-size: 24px;
+		background-color: lightyellow;
+	}
+	
+	#zanki {
+		margin-left: 10px;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="hp-bar">
+			<div id="current-hp"></div>
+		</div>
+		<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg"></svg>
+		<div id="info">
+			残機<br>
+			<span id="zanki"></span>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="util.js"></script>
+	<script type="text/javascript" src="missile.js"></script>
+	<script type="text/javascript" src="danmaku.js"></script>
+	<script type="text/javascript" src="enemy.js"></script>
+	<script type="text/javascript" src="player.js"></script>
+	<script type="text/javascript" src="enemyActionSchedule.js"></script>
+	<script type="text/javascript" src="enemiesCreateSchedule.js"></script>
+	<script type="text/javascript" src="gameManager.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
