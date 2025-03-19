@@ -48,6 +48,11 @@ let GameManager = function() {
 			startText.attr({x: 328, y: 268, 'font-family': 'メイリオ', 'font-size': 36});
 			startText.css('cursor', 'pointer')
 			$('svg').append(startText);
+
+			let controlText = $(document.createElementNS('http://www.w3.org/2000/svg', 'text'));
+			controlText.text('Space: 射撃　矢印: 移動');
+			controlText.attr({x: 265, y: 310, 'font-family': 'メイリオ', 'font-size': 24});
+			$('svg').append(controlText);
 			
 			startText.hover(
 				function() {
@@ -69,6 +74,7 @@ let GameManager = function() {
 					
 					$('#zanki').text(player.zanki);
 					$(this).remove();
+					controlText.remove();
 				}
 			);
 		}
